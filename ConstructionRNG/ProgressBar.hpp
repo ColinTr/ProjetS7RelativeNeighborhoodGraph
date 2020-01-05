@@ -11,30 +11,34 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <vector>
+#include <thread>
 
-class ProgressBar{
-    //Atributes
+
+class ProgressBar {
+	//Atributes
 private:
-    unsigned int length;
-    unsigned int cursor;
-    
-    unsigned int cursorBar;
-    unsigned int cursorPercent;
-    
-    unsigned int lengthBar;
-    
-    //Constructors & Destructor
+	unsigned int length;
+	unsigned int cursor;
+
+	unsigned int cursorBar;
+	unsigned int cursorPercent;
+
+	unsigned int lengthBar;
+
+	std::vector<std::thread> listOfThread;
+	//Constructors & Destructor
 public:
-    ProgressBar();
-    
-    //Methods
+	ProgressBar();
+
+	//Methods
 public:
-    void initialize(unsigned int l);
-    void update();
-    void print();
-    
+	void initialize(unsigned int l);
+	void update();
+	void print();
+
 private:
-    unsigned int setToPercent(unsigned int value);
+	unsigned int setToPercent(unsigned int value);
 };
 
 #endif /* ProgressBar_hpp */

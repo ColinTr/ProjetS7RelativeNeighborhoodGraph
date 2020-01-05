@@ -30,8 +30,8 @@
 int main(int argc, const char * argv[]) {
 
 	//Initialization
-	std::string dataFile = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/SATLOG - 4000/sat_train-4000lignes.data";
-	std::string classesFile = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/SATLOG - 4000/temp.txt";
+	std::string dataFile = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/Iris/iris.data";
+	std::string classesFile = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/Iris/temp.txt";
 	std::string exportDirectory = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/";
 	char separationCharacter = ',';
 	unsigned int versionOfTravelAlgorithm = 2;
