@@ -3,7 +3,7 @@
 //  RelativeNeighborhoodGraph
 //
 //  Created by GuillaumeBouchard ColinTroisemaine on 15/11/2019.
-//  Copyright © 2019 GuillaumeBouchard ColinTroisemaine. All rights reserved.
+//  Copyright Â© 2019 GuillaumeBouchard ColinTroisemaine. All rights reserved.
 //
 
 #include <iostream>
@@ -25,14 +25,14 @@
  arg -s separationCharacter : specify what the separation character of the file is.
  arg -v version_number : version of the travel algorithm, only version 1 and 2 available for now.
  arg -k numberOfNodes : instead of inserting each node on every nodes of the graph, we randomly select k nodes to insert on.
- @return 1 erreur, 0 generation réussie
+ @return 1 erreur, 0 generation rÃ©ussie
  */
 int main(int argc, const char * argv[]) {
 
 	//Initialization
-	std::string dataFile = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/Iris/iris.data";
-	std::string classesFile = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/Iris/temp.txt";
-	std::string exportDirectory = "C:/Users/Colin/Google Drive/DI/S7/Projet S7 - Nouvelle Version/";
+	std::string dataFile = "";
+	std::string classesFile = "";
+	std::string exportDirectory = "";
 	char separationCharacter = ',';
 	unsigned int versionOfTravelAlgorithm = 2;
 	int k = -1;
