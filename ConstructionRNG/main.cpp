@@ -72,7 +72,7 @@ int main(int argc, const char * argv[]) {
 
 	//Check if we did input a dataFile if not terminate the program.
 	if (dataFile == "") {
-		std::cout << "Invalid arguments, missing the graph file." << std::endl << "Use -g \"path\"." << std::endl;
+		std::cout << "Invalid arguments, missing the data file." << std::endl << "Use -d \"path\"." << std::endl;
 		return 1;
 	}
 
