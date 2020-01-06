@@ -17,18 +17,25 @@
 #include "Exception.hpp"
 #include "TimeClock.hpp"
 
+const char fileSystemSeparator =
+#ifdef _WIN32
+'\\';
+#else
+'/';
+#endif
 
-/*
- arg -d "path" : dataFile, must be here if not return 1 and ask user to use the program with -g
- arg -c "path" : classesFile, if missing consider that there is no classes attribute in the graphFile.
- arg -e "path" : exportFolder, if missing print the result of the travel algorithm.
- arg -s separationCharacter : specify what the separation character of the file is.
- arg -v version_number : version of the travel algorithm, only version 1 and 2 available for now.
- arg -k numberOfNodes : instead of inserting each node on every nodes of the graph, we randomly select k nodes to insert on.
- @return 1 erreur, 0 generation réussie
+/**
+ *\name main
+ *\brief Main function of our program.
+ *arg -d "path" : dataFile, must be here if not return 1 and ask user to use the program with -g
+ *arg -c "path" : classesFile, if missing consider that there is no classes attribute in the graphFile.
+ *arg -e "path" : exportFolder, if missing print the result of the travel algorithm.
+ *arg -s separationCharacter : specify what the separation character of the file is.
+ *arg -v version_number : version of the travel algorithm, only version 1 and 2 available for now.
+ *arg -k numberOfNodes : instead of inserting each node on every nodes of the graph, we randomly select k nodes to insert on.
+ *\return int 1 = error, 0 graph's generation successful
  */
 int main(int argc, const char * argv[]) {
-
 	//Initialization
 	std::string dataFile = "";
 	std::string classesFile = "";
@@ -120,6 +127,11 @@ int main(int argc, const char * argv[]) {
 			clock.tick();
 		}
 		else {
+
+			if (exportDirectory.back() != fileSystemSeparator) {
+				exportDirectory += fileSystemSeparator;
+			}
+
 			std::string nodesPath = exportDirectory + "nodes.csv";
 			std::string edgesPath = exportDirectory + "edges.csv";
 
